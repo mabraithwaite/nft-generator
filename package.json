@@ -1,0 +1,32 @@
+{
+  "name": "nft-generator",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Generates a collection of NFTs",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "format:write": "prettier src/**/*.js --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mabraithwaite/nft-generator.git"
+  },
+  "author": "mabraithwaite",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mabraithwaite/nft-generator/issues"
+  },
+  "homepage": "https://github.com/mabraithwaite/nft-generator#readme",
+  "devDependencies": {
+    "eslint": "^8.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.4.1"
+  },
+  "dependencies": {
+    "imagemagick": "^0.1.3",
+    "log-update": "^5.0.0",
+    "luxon": "^2.0.2",
+    "minimist": "^1.2.5"
+  }
+}

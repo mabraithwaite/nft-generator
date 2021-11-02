@@ -1,0 +1,9 @@
+node_modules
+package-lock.json
+*.csv
+cache/*.json
+.vscode
+*.png
+*.jpg
+*.xcf
+!test-pics/*.png
