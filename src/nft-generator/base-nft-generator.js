@@ -17,10 +17,12 @@ export class BaseNftGenerator {
     generateNftCollection(nftToGenerate) {
         const nfts = [];
         const nftHashes = new Set();
+        const padding = ('' + nftToGenerate).length;
         do {
             const nft = this.generateNft();
             const nftHash = this.getNftHash(nft);
             if (!nftHashes.has(nftHash)) {
+                nft.Name = this.namePrefix() + ('' + (nfts.length + 1)).padStart(padding, '0');
                 nftHashes.add(nftHash);
                 nfts.push(nft);
                 logUpdate('nft metadata generated:', nfts.length);
@@ -50,6 +52,10 @@ export class BaseNftGenerator {
     }
 
     // Abstract
+
+    namePrefix() {
+        throw new Error('namePrefix() not implemented!');
+    }
 
     getImageLayers(nft) {
         throw new Error('getImageLayers() not implemented!');

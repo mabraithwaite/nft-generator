@@ -16,6 +16,10 @@ export class ColorNftGenerator extends BaseNftGenerator {
         super(inputDir, outputDir, outputFileExt);
     }
 
+    namePrefix() {
+        return 'Color Box #';
+    }
+
     generateNft() {
         const nft = {};
         let prev;
