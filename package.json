@@ -6,7 +6,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "format:write": "prettier src/**/*.js --write"
+    "format:write": "prettier src/*.js --write && prettier src/**/*.js --write"
   },
   "repository": {
     "type": "git",
